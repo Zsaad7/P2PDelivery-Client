@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 // here i go
-import { Registration } from './registration';
+import { RegistrationComponent } from './registration/registration.component';
 
 const routes: Routes = [
-  { path: '', component: Registration }
+  { path: 'registration', component: RegistrationComponent }
 ];
 
 @NgModule({

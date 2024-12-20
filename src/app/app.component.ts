@@ -1,38 +1,41 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterOutlet, RouterLink } from '@angular/router';
 
-interface WeatherForecast {
-  date: string;
-  temperatureC: number;
-  temperatureF: number;
-  summary: string;
-}
+//interface WeatherForecast {
+//  date: string;
+//  temperatureC: number;
+//  temperatureF: number;
+//  summary: string;
+//}
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  standalone: false,
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [CommonModule, RouterOutlet, RouterLink],
+  styleUrl: './app.component.css',
+  templateUrl: './app.component.html'
 })
-export class AppComponent implements OnInit {
-  public forecasts: WeatherForecast[] = [];
+export class AppComponent {
+  /*public forecasts: WeatherForecast[] = [];*/
 
-  constructor(private http: HttpClient) {}
+  /*constructor(private http: HttpClient) { }*/
 
-  ngOnInit() {
-    this.getForecasts();
-  }
+  //ngOnInit() {
+  //  this.getForecasts();
+  //}
 
-  getForecasts() {
-    this.http.get<WeatherForecast[]>('/weatherforecast').subscribe(
-      (result) => {
-        this.forecasts = result;
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
-  }
+  //getForecasts() {
+  //  this.http.get<WeatherForecast[]>('/weatherforecast').subscribe(
+  //    (result) => {
+  //      this.forecasts = result;
+  //    },
+  //    (error) => {
+  //      console.error(error);
+  //    }
+  //  );
+  //}
 
   title = 'ptpdelivery.client';
 }
