@@ -1,0 +1,44 @@
+.registration-form {
+  max-width: 600px;
+  margin: auto;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
+
+.form-group {
+  margin-bottom: 1em;
+}
+
+  .form-group label {
+    margin-bottom: .5em;
+    color: #333333;
+    display: block;
+  }
+
+.form-control {
+  border: 1px solid #CCCCCC;
+  padding: .5em;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn {
+  padding: 0.7em;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: .3em;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007BFF;
+}
+
+@media (max-width: 600px) {
+  .registration-form {
+    padding: .5em;
+  }
+}

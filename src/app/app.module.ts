@@ -1,25 +1,17 @@
-/*import { HttpClientModule } from '@angular/common/http';*/
-import { NgModule, ApplicationRef } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'; // Importation de FormsModule
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-/*import { RegistrationComponent } from './registration.component';*/
+import { RegistrationComponent } from './registration/registration.component'; // Importation de RegistrationComponent
 
 @NgModule({
-  declarations: [
-    /*AppComponent,*/
-    /*RegistrationComponent*/
-  ],
   imports: [
-    BrowserModule, /*HttpClientModule,*/
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule,
+    RegistrationComponent // Ajout de RegistrationComponent ici
   ],
-  providers: [],
- /* bootstrap: [AppComponent]*/
+  providers: []
 })
-export class AppModule {
-  ngDoBootstrap(appRef: ApplicationRef) {
-    appRef.bootstrap(AppComponent);  // Manually bootstrap the main component
-  }
-}
+export class AppModule { }
